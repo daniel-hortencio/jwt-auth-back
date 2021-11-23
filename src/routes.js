@@ -25,6 +25,12 @@ const users = [
 
 let refreshTokenList = []
 
+router.get('/', (_, res) => {
+    return res.json({
+        message: 'Backend rodando!'
+    })
+})
+
 router.post('/signin', async (req, res) => {
     const { email, password } = req.body
 
